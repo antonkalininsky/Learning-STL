@@ -1,34 +1,14 @@
 #include <QCoreApplication>
 #include <iostream>
 
-/* пример из книги
+/* цель:
+ * изучение механизма шаблонов для создания шаблонного класса
  *
- * шаблонный класс
- *  template <class T>
- *  class Pair {
- *  public:
- *      Pair (T x1, T y1): x(x1), y(y1) {}
- *      void showQ();
- *  private:
- *      T x, y;
- *  };
- *
- *  template <class T>
- *  void Pair<T>::showQ() {
- *      cout << x/y << endl;
- *  }
- *
- *  int main() {
- *      Pair<double> a(37.0, 5.0);
- *      Pair<int> u(37, 5);
- *      a.showQ();
- *      u.showQ();
- *      return 0;
- *  }
+ * вывод:
+ * 1) механизм шаблонов позволяет писать более универсальный код
+ * 2) реализация и объявления темплейтных классов должны быть в одном файле, иначе компилятор не сможет собрать проект
  */
 
-// ОСОБЕННОСТИ КОМПИЛЯТОРА
-// реализация и объявления темплейтных классов должны быть в одном файле
 template <class T>
 class DigitsCounter {
 public:
