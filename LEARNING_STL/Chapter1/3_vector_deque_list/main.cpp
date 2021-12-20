@@ -51,7 +51,7 @@ void vectorPractice() {
     std::cout << "can't push and pop front element of vector\n";
     // вставка элемента в середине вектора
     std::cout << "insert number in the middle of vector: ";
-    v.insert(v.begin() + 1, 1, 9);
+    v.insert(v.begin() + 1, 9);
     showContainer(v);
     // удаление элемента из середины вектора
     std::cout << "delete number from the middle of vector: ";

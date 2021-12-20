@@ -3,8 +3,6 @@
 #include <list>
 #include <deque>
 #include <iostream>
-#include <algorithm>
-#include <stdlib.h>
 
 /* цель:
  * сравнение вектора, листа и двухсторонней очереди (вставка, удаление, доступ) с точки зрения организации памяти
