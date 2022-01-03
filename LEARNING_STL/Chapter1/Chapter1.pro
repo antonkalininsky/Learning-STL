@@ -9,4 +9,5 @@ SUBDIRS += \
     6_sort \
     7_container_init \
     8_find_copy_merge \
-    9_custom_merge
+    9_custom_merge \
+    10_iterators
