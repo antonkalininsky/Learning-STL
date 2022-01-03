@@ -8,4 +8,5 @@ SUBDIRS += \
     5_compare2_vector_list_deque \
     6_sort \
     7_container_init \
-    8_find_copy_merge
+    8_find_copy_merge \
+    9_custom_merge

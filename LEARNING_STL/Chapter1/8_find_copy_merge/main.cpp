@@ -1,8 +1,6 @@
 #include <QCoreApplication>
 #include <iostream>
 #include <vector>
-#include <list>
-#include <deque>
 
 using namespace std;
 
@@ -12,7 +10,7 @@ using namespace std;
  * вывод:
  * 1) find работает как надо
  * 2) copy необходимо копировать размер не больше конечного
- * 3) copy может использовать любой размер в режиме ставки
+ * 3) copy может использовать любой размер в режиме вставки
  * 4) merge - аналогично copy
  */
 
@@ -85,11 +83,11 @@ int main(int argc, char *argv[])
 
     // MEGRE
     vector<int> E(4);
-    cout << "vector E has 4 zero elements\n";
+    cout << "vector E: ";
+    showContainer(E);
     cout << "merge first two elements of A and B into E: ";
     merge(A.begin(), A.begin() + 2, B.begin(), B.begin() + 2, E.begin());
     showContainer(E);
-
 
     // MEGRE INSERTER
     vector<int> D;
@@ -97,10 +95,6 @@ int main(int argc, char *argv[])
     cout << "merge A and B into D (inserter): ";
     merge(A.begin(), A.end(), B.begin(), B.end(), inserter(D, D.begin()));
     showContainer(D);
-
-
-
-
 
     return a.exec();
 }
