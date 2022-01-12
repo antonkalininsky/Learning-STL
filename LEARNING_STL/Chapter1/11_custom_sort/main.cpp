@@ -2,7 +2,7 @@
  * сортировка по пользовательским правилам
  *
  * вывод:
- * возможно использование кастомных пользовательских функций для использования в алгоритме сортировки
+ * возможно использование кастомных пользовательских функций и функциональных объектов для использования в алгоритме сортировки
  */
 
 #include <QCoreApplication>
@@ -26,6 +26,13 @@ bool compFoo(int x, int y) {
 bool compFoo2 (int x, int y) {
     return (x % 100 - x % 10) / 10 > (y % 100 - y % 10) / 10;
 }
+
+class compObj {
+public:
+    bool operator()(int x, int y) {
+        return x <= y;
+    }
+};
 
 int main(int argc, char *argv[])
 {
@@ -52,8 +59,15 @@ int main(int argc, char *argv[])
     // сортировка 2
     sort(v.begin(), v.end(), compFoo2);
 
-    // отсортированный вектор функцией 1
+    // отсортированный вектор функцией 2
     cout << "Sorted vector 2: ";
+    showContainer(v);
+
+    // сортировка 3
+    sort(v.begin(), v.end(), compObj());
+
+    // отсортированный вектор функциональный объектом
+    cout << "Sorted vector 3: ";
     showContainer(v);
 
     return a.exec();

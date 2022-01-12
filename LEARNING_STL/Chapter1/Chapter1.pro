@@ -11,4 +11,5 @@ SUBDIRS += \
     8_find_copy_merge \
     9_custom_merge \
     10_iterators \
-    11_custom_sort
+    11_custom_sort \
+    12_find_remove_if
